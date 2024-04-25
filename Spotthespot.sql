@@ -54,7 +54,7 @@ WHERE reservas.nombreUsuario = 'Paco';
 SELECT usuarios.nombreUsuario, reservas.nombreReserva, reservas.fecha
 FROM reservas
 JOIN usuarios ON reservas.nombreUsuario = usuarios.nombreUsuario
-WHERE reservas.fecha = 'fecha_especifica';
+WHERE reservas.fecha = '2024-01-23';
 
 -- Insercción de usuario
 INSERT INTO usuarios (nombreUsuario, apellido1, contraseña)
@@ -78,10 +78,83 @@ WHERE numReserva = 642;
 DELETE FROM usuarios
 WHERE nombreUsuario = 'Manolo';
 
--- Eliminación de un servicio y todas las reservas asociadas
-DELETE FROM servicios
-WHERE codigoServicio = 2;
+-- Eliminar todas las reservas asociadas al servicio que deseas eliminar
+DELETE FROM reservas WHERE Servicio = 2;
 
-DELETE FROM reservas
-WHERE Servicio = 2;
+-- Luego puedes eliminar el servicio
+DELETE FROM servicios WHERE codigoServicio = 2;
 
+-- Vistas
+CREATE VIEW ReservasPorUsuario AS
+SELECT reservas.numReserva, reservas.nombreReserva, reservas.fecha, servicios.nombreServicio, servicios.precio
+FROM reservas
+JOIN servicios ON reservas.Servicio = servicios.codigoServicio;
+
+CREATE VIEW ServiciosDisponibles AS
+SELECT * FROM servicios;
+
+-- Usuarios y Permisos
+-- Creamos usuarios y les asignamos permisos
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin123';
+GRANT ALL PRIVILEGES ON SPOTTHESPOT.* TO 'admin'@'localhost';
+
+CREATE USER 'standard'@'localhost' IDENTIFIED BY 'standard123';
+GRANT SELECT ON SPOTTHESPOT.ReservasPorUsuario TO 'standard'@'localhost';
+
+-- Índices
+-- Detectamos que la consulta de reservas por usuario es frecuente
+CREATE INDEX idx_nombreUsuario ON reservas (nombreUsuario);
+
+-- Triggers
+-- Trigger para auditar inserciones en la tabla reservas
+DELIMITER //
+
+CREATE TRIGGER Audit_Insert_Reservas
+AFTER INSERT ON reservas
+FOR EACH ROW
+BEGIN
+    INSERT INTO audit_log (accion, tabla_afectada, fecha) VALUES ('Inserción', 'reservas', NOW());
+END//
+
+DELIMITER ;
+DELIMITER //
+
+-- Trigger para actualizar el número de reservas de un servicio
+CREATE TRIGGER Actualizar_Num_Reservas
+AFTER INSERT ON reservas
+FOR EACH ROW
+BEGIN
+    UPDATE servicios SET numReservas = numReservas + 1 WHERE codigoServicio = NEW.servicio;
+END//
+
+DELIMITER ;
+
+-- Procedimientos Almacenados
+DELIMITER //
+
+-- Procedimiento para realizar una reserva
+CREATE PROCEDURE RealizarReserva(
+    IN p_nombreReserva VARCHAR(40),
+    IN p_fecha DATE,
+    IN p_Servicio INT,
+    IN p_nombreUsuario VARCHAR(30)
+)
+BEGIN
+    INSERT INTO reservas (nombreReserva, fecha, Servicio, nombreUsuario) 
+    VALUES (p_nombreReserva, p_fecha, p_Servicio, p_nombreUsuario);
+END //
+
+-- Procedimiento para eliminar una reserva
+CREATE PROCEDURE EliminarReserva(
+    IN p_numReserva INT
+)
+BEGIN
+    DELETE FROM reservas WHERE numReserva = p_numReserva;
+END //
+
+DELIMITER ;
+
+DROP USER 'admin'@'localhost';
+DROP USER 'standart'@'localhost';
+FLUSH PRIVILEGES;
