@@ -7,4 +7,4 @@ La aplicación de Educación a Distancia (ED) es una plataforma diseñada para f
 La base de datos diseñada para la aplicación ED tiene como objetivo almacenar la información necesaria para el funcionamiento de la plataforma, incluyendo datos de usuarios, cursos, materiales educativos, interacciones, entre otros.
 
 <h2>Estructura de la Base de Datos</h2>
-Para ver la estructura detallada de la base de datos diseñada, consulte el archivo nombre_del_archivo.sql ubicado en el directorio correspondiente en el repositorio.
+Para ver la estructura detallada de la base de datos diseñada, consulte el archivo <b>SpotTheSpot.sql</b> ubicado en el directorio correspondiente en el repositorio.
