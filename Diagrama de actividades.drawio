@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2024-05-07T16:01:27.182Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="DmQp9lfupk4PNc9lilFT" version="24.3.1" type="device">
+  <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
+    <mxGraphModel dx="606" dy="246" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hyvPZXldIbqlBrTz5avD-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-1" target="hyvPZXldIbqlBrTz5avD-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-1" value="El cliente mete el usuario y la contraseña" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="77" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-5" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-2" target="hyvPZXldIbqlBrTz5avD-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="207" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="207" />
+              <mxPoint x="140" y="107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-7" value="si" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-2" target="hyvPZXldIbqlBrTz5avD-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="265" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-2" value="Es correcta?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="166" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-6" value="Entra a su cuenta y la configura" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="294" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-8" target="hyvPZXldIbqlBrTz5avD-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-8" value="Puede iniciar una reserva" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-10" target="hyvPZXldIbqlBrTz5avD-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-10" value="Selecciona el sitio en el que quiere reservar" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-12" target="hyvPZXldIbqlBrTz5avD-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-12" value="Selecciona fecha y hora de la reserva" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-14" target="hyvPZXldIbqlBrTz5avD-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-14" value="Ingresar detalles del cliente y de la reserva" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-16" value="Confirmar la reserva" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="382" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-18" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="397" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hyvPZXldIbqlBrTz5avD-20" target="hyvPZXldIbqlBrTz5avD-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hyvPZXldIbqlBrTz5avD-20" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="55" y="9" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
